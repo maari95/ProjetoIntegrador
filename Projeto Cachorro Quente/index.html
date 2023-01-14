@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" media="screem">
+    <title>Página Inicial</title>
+    <link rel="icon" href="icon/LOGO.png">
+    <link rel="stylesheet" type="text/css" href="css/Base.css">
+    <!-- a biblioteca do query deve ser inserida antes da bilbioteca do Bootstrap-->
+    <script type="text/javascript" src="js/jquery3.6.1.min"></script>
+    <!--
+    Formatação do Menu com o a Tan NAV e recursos de dropdown do Bootestrap
+  -->
+
+    <!--URL para pegar os links abaixo: https://getbootstrap.com.br/docs/4.1/getting-started/introduction/-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <style>
+    </style>
+</head>
+<header>    
+</header>
+<body id="corpo"></body>
+<style>
+    body{
+        background-image: url('img/background.webp');
+        }
+</style>
+<!-- LOGIN!!!!!!!!!! -->
+<nav class="nav nav-pills justify-content-end">
+    <a class="navbar-brand" href="pagelogin.html">
+        <a style="width: 50px; height: 50px; margin: 10px; margin-top: 5px; background-color: black;"
+            class="nav-link nav-button btn-lg btn-warning active" href="pagelogin.html"><img src="img/icon.png"
+                id="ruf"></a>
+        </li>
+        </ul>
+</nav>
+<!-- LOGIN!!!!!!!!!! -->
+<div class="container-fluid">
+    <div class="container">
+        <div class="row text-center">
+            <span id="topo"></span>
+            <header id="cabecalhoprincipal" class="col-12">
+                <img id="logo" src="img/LOGO1.webp" style="height: 250px; filter: contrast(150%) ">
+                <p class="p-1"></p>
+            </header>
+        </div>
+        <!-- BOTÕES -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3">
+                    <a href="index.html" target="blank" style="text-decoration: none;">
+                        <button type="button" class="btn btn btn-outline-warning btn-lg btn-block">Home</button>
+                    </a>
+                </div>
+                <div class="col-sm-3">
+                    <a href="cardapio.html" target="blank" style="text-decoration: none;">
+                        <button type="button" class="btn btn btn-outline-warning btn-lg btn-block">Cardápio</button>
+                    </a>
+                </div>
+                <div class="col-sm-3">
+                    <a href="sobre.html" target="blank" style="text-decoration: none;">
+                        <button type="button" class="btn btn btn-outline-warning btn-lg btn-block">Sobre nós</button>
+                    </a>
+                </div>
+                <div class="col-sm-3">
+                    <a href="#modal1" data-toggle="modal" target="blank" style="text-decoration: none;">
+                        <button type="button" class="btn btn btn-outline-warning btn-lg btn-block">Contatos</button>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div id="modal1" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Contatos</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <img src="https://img.icons8.com/ios-filled/344/ringer-volume.png" width="10%" height="10%">
+                        <b style="color:black ;">(21)3663-2868</b><br>
+                        <br>
+                            <img src="icon/insta.png" width="10%" height="10%">
+                            <a href="https://www.instagram.com/dog_primeartesanal/" style="color:black;"><b>@dog_primeartesanal</b></a>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">Fechar</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- BOTÕES -->
+        <section id="secaoprincipal" class="col-md-12">
+         <div class="row">
+                <div class="col-md-12">
+                    <p class="p-1"></p>
+                    <p class="p-2"></p>
+                    <div data-interval="3000"id="carrosel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="3"class="active"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="img/hotdog1.webp" class="img-fluid" alt="Primeiro Slide">
+                            </div>
+                            <div class="carousel-item ">
+                                <img class="d-block w-100" src="img/hotdog2.webp" class="img-fluid" alt="Segundo Slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="img/hotdog3.jpg" class="img-fluid" alt="Terceiro Slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="img_banner/cachorro-quente-intro.jpg" class="img-fluid" alt="Quarto Slide">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </a>
+                </a>
+                    </div>
+                </div>
+                </header>
+            </div> 
+        </section>
+    </div>
+
+
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+<p class="p-1"></p>
+<div class="row">
+
+
+    <!-- <section id="secaoprincipal" class="col-md-12"> -->
+
+
+        <!-- <img id="foto" src="img_banner/cachorro-quente-intro.jpg"> -->
+    <!-- </section> -->
+    <!-- <p class="p-2"> -->
+
+
+
+</div>
+</div>
+</div>
+
+<!--d-none d-sm-block manda ocultar em todas os breakpoints porém exiibe so sm para cima contando com o sm-->
+<aside>
+    <div class="row">
+        <!-- <aside id="asideprincipal" >
+
+            </aside> -->
+    </div>
+    </div>
+    <p class="p-1"></p> 
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <footer style="background: black;">
+                    <p class="p-1"></p>
+                      <!--   <img src="img/mapa.PNG " class="img-fluid" width="15%" height="15%" align="middle" alt="..." display="flex-sm-fill">  -->
+                        <p class="p-1"></p>
+                        <p class="p-1"></p>
+                        <h6 style="color:white;"><b>Encontre-nos aqui</b></h6>
+                         <p style="color: white;"><a href="https://goo.gl/maps/PWH7Vt6rBzQaZgfFA" target="_blank" style="text-decoration:none; color: white;">Rua Luis Sobral, 1260 - Metrópole, <br> Nova iguaçu - RJ. 26220-278</br></p></a>
+                         <a href="#"><img id="zap" src="whatsapp.png" align="center"></a>
+                         <a href="https://www.instagram.com/dog_primeartesanal/"><img id="insta" src="instagram.png"align="center"></a>
+                         <a href="#"><img id="ifood"src="logo-ifood-256.png"align="center" widht="5%" height="5%"></a>
+                     </div>
+            </footer>
+
+    
+    </div>
+    </div>
+    </div>
+    </body>
+
+</html>
