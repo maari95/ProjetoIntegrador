@@ -13,8 +13,8 @@
 
     <title>Cadastro de Clientes</title>
     <br>
-  <img src="img/LOGO1.webp" width="9%" height="9%"  align="right">
-    
+    <img src="img/LOGO1.webp" width="9%" height="9%" align="right">
+
 </head>
 
 <body style="background-color:#524733;">
@@ -32,11 +32,11 @@
             </li>
             </ul>
     </nav>
-<div class="container text-center">
-       <img src="img/icon.png" width=8% height=8% class="rounded" alt="..." >
+    <div class="container text-center">
+        <img src="img/icon.png" width=8% height=8% class="rounded" alt="...">
     </div>
     <div class="container-fluid col-sm-4 text-break">
-    
+
         <!-- Inicio do formulário -->
         <form action="registrocliente.php" method="post" id="formRegistro" class="cad">
             <p class="p-1"></p>
@@ -45,7 +45,7 @@
             <p class="p-1"></p>
 
             <!-- primeira linha -->
-            <div class="row"> 
+            <div class="row">
                 <div class="col-sm-7">
                     <label>Nome Completo*</label>
                     <input type="text" class="form-control is valid form-control-md" id="validationdefault01"
@@ -53,11 +53,12 @@
                 </div>
                 <div class="col-sm">
                     <label>CPF*</label>
-                    <input type="text" class="form-control is valid form-control-md" id="validationdefault01" name="cpf"
-                        placeholder="xxx.xxx.xxx-xx" required><br>
+                    <input type="text" class="form-control is valid form-control-md" id="validationdefault01" name="cp "
+                        placeholder="EX.:000.000.000-00" cpf-mask = "000.000.000-00" required><br>
                 </div>
             </div>
 
+            
 
             <!-- segunda linha -->
             <div class="row">
@@ -68,8 +69,8 @@
                 </div>
                 <div class="col-sm">
                     <label>Telefone*</label>
-                    <input type="text" class="form-control is valid form-control-md" id="validationdefault07"
-                        name="telefone" placeholder="(XX) 9 XXXX-XXXX" required>
+                    <input type="text" class="form-control phone-ddd-mask" id="validationdefault07"
+                        name="telefone" placeholder="EX.:(00) 00000-0000" required>
                 </div>
             </div>
 
@@ -98,8 +99,9 @@
                 </div>
                 <div class="col-sm">
                     <label>Complemento</label>
-                    <input type="text" class="form-control form-control-md" name="complemento" placeholder="Complemento"
-                        required><br>
+                    <input type="text" class="form-control form-control-md" name="complemento"
+                        placeholder="Complemento">
+                    <br>
                 </div>
             </div>
 
@@ -125,7 +127,7 @@
                 <div class="col-sm-6">
                     <label>CEP*</label>
                     <input type="text" class="form-control is valid form-control-md" id="validationdefault03" name="cep"
-                        placeholder="XX.XXX-XXX" required>
+                        placeholder="Digite seu CEP" required>
                 </div>
 
                 <div class="col-sm">
@@ -134,10 +136,10 @@
                     <input type="text" class="form-control is valid form-control-md" id="validationdefault03"
                         name="estado" placeholder="Sigla do estado" required>
                     <!--<option selected>Selecione</option>
-                            <option value="1">ES</option>
-                                <option value="2">MG</option>
-                                 <option value="3">RJ</option>
-                                 <option value="4">SP</option> -->
+                                        <option value="1">ES</option>
+                                            <option value="2">MG</option>
+                                            <option value="3">RJ</option>
+                                            <option value="4">SP</option> -->
 
                     </select>
 
@@ -178,15 +180,9 @@
 
     <footer id="rodapecad" class="col-sm-12">
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    </body>
-</html>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js">
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"
 
-
-
-
-
-
-
-        
+            
+                </body >
+            </html >
