@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 26-Nov-2022 às 23:56
+-- Tempo de geração: 29-Nov-2022 às 03:18
 -- Versão do servidor: 10.4.25-MariaDB
 -- versão do PHP: 8.1.10
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `db_dogprime`
+-- Banco de dados: `hotdog`
 --
 
 -- --------------------------------------------------------
@@ -40,9 +40,17 @@ CREATE TABLE `cliente` (
   `complemento` varchar(100) DEFAULT NULL,
   `bairro` varchar(100) NOT NULL,
   `municipio` varchar(100) NOT NULL,
-  `cep` varchar(9) NOT NULL,
+  `cep` varchar(10) DEFAULT NULL,
   `estado` char(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `cliente`
+--
+
+INSERT INTO `cliente` (`idCliente`, `cpfCliente`, `nomeCliente`, `telefoneCliente`, `emailCliente`, `senhaCliente`, `tipoLogradouro`, `logradouro`, `numero`, `complemento`, `bairro`, `municipio`, `cep`, `estado`) VALUES
+(1, '123.456.789-10', 'Fulano', '(21)91234-5678', 'fulano@gmail.com', 'hotdog123', 'rua', 'General Baiano', '934', 'ap101', 'Miguel Couto', 'Nova Iguaçu', '26-157.000', 'RJ'),
+(2, '123.456.789-11', 'Ciclano', '(21)91234-6789', 'ciclano@gmail.com', 'pizza123', 'Avenida', 'Itapemerim', '123', 'fundos', 'Luiz de Lemos', 'Nova Iguaçu', '16-153.000', 'RJ');
 
 -- --------------------------------------------------------
 
@@ -54,6 +62,13 @@ CREATE TABLE `departamento` (
   `idDepartamento` int(10) NOT NULL,
   `nomeDepartamento` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `departamento`
+--
+
+INSERT INTO `departamento` (`idDepartamento`, `nomeDepartamento`) VALUES
+(1, 'vendas');
 
 -- --------------------------------------------------------
 
@@ -77,6 +92,13 @@ CREATE TABLE `fornecedor` (
   `cep` varchar(9) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Extraindo dados da tabela `fornecedor`
+--
+
+INSERT INTO `fornecedor` (`idFornecedor`, `cnpj`, `nomeFornecedor`, `telefoneFornecedor`, `nomeGerente`, `tipoLogradouro`, `logradouro`, `numero`, `complemento`, `bairro`, `municipio`, `estado`, `cep`) VALUES
+(2, '12.345.678/0001-91', 'Latícinios Milano', '(21)91234-9876', 'Danilo', 'rua', 'Dr.Cunha', '45', 'ap101', 'centro', 'Nova Iguaçu', 'RJ', '12-159.00');
+
 -- --------------------------------------------------------
 
 --
@@ -89,7 +111,7 @@ CREATE TABLE `funcionario` (
   `nomeFuncionario` varchar(100) NOT NULL,
   `telefoneFuncionario` varchar(15) NOT NULL,
   `emailFuncionario` varchar(50) NOT NULL,
-  `senhaCliente` varchar(20) NOT NULL,
+  `senhaFuncionario` varchar(20) DEFAULT NULL,
   `tipoLogradouro` varchar(100) NOT NULL,
   `logradouro` varchar(100) NOT NULL,
   `numero` varchar(5) NOT NULL,
@@ -100,6 +122,13 @@ CREATE TABLE `funcionario` (
   `cep` varchar(9) NOT NULL,
   `idDepartamento` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `funcionario`
+--
+
+INSERT INTO `funcionario` (`idFuncionario`, `cpfFuncionario`, `nomeFuncionario`, `telefoneFuncionario`, `emailFuncionario`, `senhaFuncionario`, `tipoLogradouro`, `logradouro`, `numero`, `complemento`, `bairro`, `municipio`, `estado`, `cep`, `idDepartamento`) VALUES
+(1, '987.654.321.98', 'Gabriel', '(21)99876-5432', 'gabriel@gmail.com', 'gbzada123', 'rua', 'livia guida', '974', 'ap101', 'Miguel Couto', 'Nova Iguaçu', '26', 'RJ', 1);
 
 -- --------------------------------------------------------
 
@@ -113,6 +142,14 @@ CREATE TABLE `itenspedido` (
   `idProduto` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Extraindo dados da tabela `itenspedido`
+--
+
+INSERT INTO `itenspedido` (`idItensPedido`, `idPedido`, `idProduto`) VALUES
+(1, 1, 1),
+(2, 1, 2);
+
 -- --------------------------------------------------------
 
 --
@@ -125,6 +162,13 @@ CREATE TABLE `pedido` (
   `idCliente` int(10) NOT NULL,
   `idFuncionario` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `pedido`
+--
+
+INSERT INTO `pedido` (`idPedido`, `dataPedido`, `idCliente`, `idFuncionario`) VALUES
+(1, '2022-11-28 13:42:34', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -142,6 +186,14 @@ CREATE TABLE `produto` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Extraindo dados da tabela `produto`
+--
+
+INSERT INTO `produto` (`idProduto`, `nomeProduto`, `categoria`, `descricao`, `preco`, `idFornecedor`) VALUES
+(1, 'HotDog de cafta', 'principal', 'Carne, cebolas carameladas, bacon', '20', 2),
+(2, 'Pepsi', 'bebida', 'Pepsi 2L', '10', 2);
+
+--
 -- Índices para tabelas despejadas
 --
 
@@ -150,7 +202,9 @@ CREATE TABLE `produto` (
 --
 ALTER TABLE `cliente`
   ADD PRIMARY KEY (`idCliente`),
-  ADD UNIQUE KEY `cpfCliente` (`cpfCliente`);
+  ADD UNIQUE KEY `cpfCliente` (`cpfCliente`),
+  ADD UNIQUE KEY `emailCliente` (`emailCliente`),
+  ADD UNIQUE KEY `senhaCliente` (`senhaCliente`);
 
 --
 -- Índices para tabela `departamento`
@@ -171,6 +225,8 @@ ALTER TABLE `fornecedor`
 ALTER TABLE `funcionario`
   ADD PRIMARY KEY (`idFuncionario`),
   ADD UNIQUE KEY `cpfFuncionario` (`cpfFuncionario`),
+  ADD UNIQUE KEY `emailFuncionario` (`emailFuncionario`),
+  ADD UNIQUE KEY `senhaFuncionario` (`senhaFuncionario`),
   ADD KEY `idDepartamento` (`idDepartamento`);
 
 --
@@ -204,43 +260,43 @@ ALTER TABLE `produto`
 -- AUTO_INCREMENT de tabela `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `idCliente` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `idCliente` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `departamento`
 --
 ALTER TABLE `departamento`
-  MODIFY `idDepartamento` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `idDepartamento` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `fornecedor`
 --
 ALTER TABLE `fornecedor`
-  MODIFY `idFornecedor` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `idFornecedor` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `funcionario`
 --
 ALTER TABLE `funcionario`
-  MODIFY `idFuncionario` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `idFuncionario` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `itenspedido`
 --
 ALTER TABLE `itenspedido`
-  MODIFY `idItensPedido` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `idItensPedido` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `pedido`
 --
 ALTER TABLE `pedido`
-  MODIFY `idPedido` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `idPedido` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `idProduto` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `idProduto` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restrições para despejos de tabelas
