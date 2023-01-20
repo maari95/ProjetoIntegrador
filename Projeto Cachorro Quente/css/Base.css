@@ -162,4 +162,7 @@ body{
    grid-column-gap: 15px;
    grid-row-gap: 1.5em;
 }
-
+#ModalLongoExemplo,#modal1{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:#000000;
+}
