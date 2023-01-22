@@ -38,6 +38,11 @@
             </li>
             </ul>
     </nav>
+<script>
+ 
+
+</script>
+
 </head>
 <header>    
 </header>
@@ -64,7 +69,7 @@
 <!-- Subtítulo -->
   <div class="container border border-warning">
     <div class="col-sm-12">
-    <form style="color: #c99c5e; padding: 50px;">
+    <form action="registrofeed.php" method="post"  id="frmRegistroFeed" style="color: #c99c5e; padding: 40px;">
     <div class="row">
       <div class="col-sm-12 text-start">
         <div class="h4 pb-2 mb-4 border-bottom border-warning">
@@ -230,10 +235,16 @@ Como você classificaria nossos preços?
   <div class="col-sm-12">
 <p class="p-2"></p>
 <label>Deseja Fazer Alguma Sugestão? <small>(Opcional)</small></label>
+<br>
 <p class="p-0.5"></p>
 <div class="form-floating">
-  <textarea class="form-control" placeholder="Deixe seu comentário aqui" name="sugestao" id="floatingTextarea2" style="height: 60px"></textarea>
-</div>
+   <textarea class="form-control" maxlength=125 placeholder="Deixe seu comentário aqui" name="sugestao" style="height: 60px";></textarea>
+   <small>Limite de 125 caracteres</small>
+ 
+
+
+
+  </div>
   </div>
 </div>
 <p class="p-1"></p> 
