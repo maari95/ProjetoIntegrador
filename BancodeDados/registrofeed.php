@@ -14,7 +14,7 @@ $objDb = new db();
 
 $link = $objDb -> conecta_mysql();
 
-$sql="insert into feedback(experiencia, preco, satisfacao, indicacao, nome_ind, telefone_ind, sugestao) values ('$experiencia', '$preco', '$satisfacao', '$indicacao', '$nome_ind', '$telefone_ind', '$sugestao')";
+$sql="insert into feedback(expCliente, s_preco, s_atendimento, indicacao, nome_ind, telefone_ind, sugestao) values ('$experiencia', '$preco', '$satisfacao', '$indicacao', '$nome_ind', '$telefone_ind', '$sugestao')";
 
 if (mysqli_query($link, $sql)){
     echo '<h4>Feedback Enviado!!</h4>';
