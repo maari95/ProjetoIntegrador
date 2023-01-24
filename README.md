@@ -1,2 +1,0 @@
-# ProjetoIntegrador
-Projeto Integrador HotDogPrime
