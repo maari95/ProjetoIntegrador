@@ -89,6 +89,8 @@ CREATE TABLE itensPedido(
     ON DELETE RESTRICT
     ON UPDATE CASCADE
     )ENGINE INNODB;
+    
+    
 CREATE TABLE feedback(
 expCliente char(2), 
 s_preco char(2),
