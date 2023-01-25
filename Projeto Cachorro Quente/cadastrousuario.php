@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/Base.css">
     <link rel="stylesheet" type="text/css" href="css/cadastro.css">
     <link rel="icon" href="icon/LOGO.png">
-
+   
     <title>Cadastro de Clientes</title>
     <br>
     <img src="img/LOGO1.webp" width="9%" height="9%" align="right">
@@ -53,11 +53,11 @@
                 </div>
                 <div class="col-sm">
                     <label>CPF*</label>
-                    <input type="text" class="form-control is valid form-control-md" id="validationdefault01" name="cp "
-                        placeholder="EX.:000.000.000-00" cpf-mask = "000.000.000-00" required><br>
+                    <input type="text" class="form-control is valid form-control-md" id="cpf" name="cpf" 
+                        placeholder="EX.:000.000.000-00" maxlength="14" autocomplet="off"  onkeypress="return somenteNumeros(charCode)" required ><br>
                 </div>
             </div>
-
+           
             
 
             <!-- segunda linha -->
@@ -69,10 +69,11 @@
                 </div>
                 <div class="col-sm">
                     <label>Telefone*</label>
-                    <input type="text" class="form-control phone-ddd-mask" id="validationdefault07"
+                    <input type="text" class="form-control phone-ddd-mask" id="tel"
                         name="telefone" placeholder="EX.:(00) 00000-0000" required>
                 </div>
             </div>
+            <script src= "./main.js"></script>
 
 
             <!-- terceira linha -->
@@ -180,9 +181,9 @@
 
     <footer id="rodapecad" class="col-sm-12">
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js">
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
 
             
-                </body >
-            </html >
+</body>
+     </html>
