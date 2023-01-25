@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once("conexaobanco.php");
 
 $nome = $_POST['nome'];
@@ -24,7 +24,8 @@ $sql = "insert into cliente(cpfCliente,nomeCliente,telefoneCliente,emailCliente,
 values ('$cpf','$nome','$telefone','$Email','$senha','$tp_logradouro','$logradouro','$numero','$complemento','$bairro','$municipio','$cep','$estado','$status')";
 
 if (mysqli_query($link, $sql)){
-	echo 'Cliente cadastrado';
+	$_SESSION['msg']="Usuário cadastrado com sucesso";
+	header ('Location: pagelogin.html');
 }else{
 	echo 'Erro ao cadastrar cliente..';
 }
