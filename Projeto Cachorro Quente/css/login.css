@@ -1,0 +1,30 @@
+
+@media screen and
+(max-width:1325px){
+   input{
+        width: 90% ;
+    }
+    .text-center{
+        width: 100%;
+    }
+}
+@media screen and
+(max-width:855px){
+   input{
+        width: 90% ;
+    }
+    .text-center{
+        width: 100%;
+    }
+}
+
+@media screen and
+(max-width:455px){
+   input{
+        width: 90% ;
+    }
+   .text-center{
+        width: 100%;
+       
+    }
+}
