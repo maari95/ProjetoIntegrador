@@ -91,7 +91,8 @@ body{
 /*Formatando a repsonsidade de alguns itens*/
 }
 #quemsomos{
-    border-style: solid;
+    border-style: double;
+    border-width: 10px;
 
 }
 #pic{
