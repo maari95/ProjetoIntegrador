@@ -20,9 +20,9 @@
 body {
   text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-  font-family: trebuchet ms;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 14;
-    
+      
 
 }
 
@@ -100,4 +100,7 @@ body {
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
   }
-
+h1,h3, p, small{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   color: #c99c5e;
+}
