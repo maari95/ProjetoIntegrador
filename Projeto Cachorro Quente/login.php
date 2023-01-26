@@ -20,3 +20,4 @@ if(mysqli_num_rows($resultado) > 0)
     unset($_SESSION['senhaCliente']);
     header('location:pagelogin.html');
 }
+
