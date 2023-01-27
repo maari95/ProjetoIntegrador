@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/Base.css">
+    <link rel="stylesheet" type="text/css" href="css/cadastro.css">
+    <link rel="icon" href="icon/LOGO.png">
+   
+    <title>Cadastro de Cliente</title>
+    <br>
+    <img src="img/LOGO1.webp" width="9%" height="9%" align="right">
+
+</head>
+
+<body style="background-color:#524733;">
+    <style>
+        body {
+            background-image: url('img/background.webp');
+        }
+    </style>
+
+    <nav class="nav nav-pills justify-content-start">
+        <a class="navbar-brand" href="pagelogin.html">
+            <a style="width: 50px; height: 50px; margin: 10px; margin-top: 5px;background:0;"
+                class="nav-link nav-button active" href="index.html"><img src="img/seta_esquerda.png" width="50rem"
+                    height="50rem"></a>
+            </li>
+            </ul>
+    </nav>
+    <div class="container text-center">
+        <img src="img/cachorro-quente4.png" width=8% height=8% class="rounded" alt="...">
+    </div>
+    <div class="container-fluid col-sm-4 text-break">
+
+        <!-- Inicio do formulário -->
+        <form action="registroproduto.php" method="post" id="formRegistro" class="cad">
+            <p class="p-1"></p>
+
+            <h4 class="text-break text-center">Cadastro de produto</h4>
+            <p class="p-1"></p>
+
+            <!-- primeira linha -->
+            <div class="row">
+                <div class="col-sm-7">
+                    <label>Nome do Produto*</label>
+                    <input type="text" class="form-control is valid form-control-md" id="validationdefault01"
+                        name="nomeproduto" placeholder="Nome do produto" required><br>
+                </div>
+                <div class="col-sm">
+                    <label>Categoria*</label>
+                    <input type="text" class="form-control is valid form-control-md" id="categoria" name="categoria" 
+                        placeholder="Principal, Acompanhamento e Bebida" maxlength="14" autocomplet="off"  onkeypress="return somenteNumeros(charCode)" required ><br>
+                </div>
+            </div>
+           
+            
+
+            <!-- segunda linha -->
+            <div class="row">
+                <div class="col-sm-6">
+                    <label>Descrição*</label>
+                    <input type="text" class="form-control is valid form-control-md" id="validationdefault02"
+                        name="descricao" placeholder="Descrição do produto" required><br>
+                </div>
+                <div class="col-sm">
+                    <label>Preço*</label>
+                    <input type="text" class="form-control phone-ddd-mask" id="tel"
+                        name="preco" placeholder="EX.:(00) 00000-0000" required>
+                </div>
+            </div>
+            <script src= "./main.js"></script>
+
+
+            <!-- terceira linha -->
+            <div class="col-sm">
+                <label>Fornecedor</label>    
+                <select name="fornecedor" class="form-select form-select-md">
+                    <option selected>Selecione</option>
+                    <option value="2">Laticínios Milano</option>
+                    <option value="3">Fofinho Panificações</option>
+
+
+                </select>
+            </div>
+                
+            <div class="text-center">
+                <p class="p-1"></p>
+                <button class="btn btn-lg border-none" style="background-color:#c99c5e; color: black; "
+                    type="submit">Cadastrar
+                    Produto</button>
+                <p class="p-1"></p>
+                
+
+                <p class="p-3"></p>
+            </div>
+            </nav>
+    </div>
+    </div>
+    </form>
+    </div>
+
+    <footer id="rodapecad" class="col-sm-12">
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+            
+</body>
+     </html>

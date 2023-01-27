@@ -10,10 +10,10 @@
     <link rel="stylesheet" type="text/css" href="css/Base.css">
     <link rel="stylesheet" type="text/css" href="css/cadastro.css">
     <link rel="icon" href="icon/LOGO.png">
-
-    <title>Cadastro de Clientes</title>
+   
+    <title>Cadastro de Cliente</title>
     <br>
-    <img src="img/LOGO1.webp" width="9%" height="9%" align="right">
+   <a href="index.html"><img src="img/LOGO1.webp" width="9%" height="9%" align="right"></a>
 
 </head>
 
@@ -33,46 +33,45 @@
             </ul>
     </nav>
     <div class="container text-center">
-        <img src="img/icon.png" width=8% height=8% class="rounded" alt="...">
+        <img src="img/correio.png" width=8% height=8% class="rounded" alt="...">
     </div>
     <div class="container-fluid col-sm-4 text-break">
 
         <!-- Inicio do formulário -->
-        <form action="registrocliente.php" method="post" id="formRegistro" class="cad">
+        <form action="registrofornecedor.php" method="post" id="formRegistro" class="cad">
             <p class="p-1"></p>
 
-            <h4 class="text-break text-center">Cadastro Clientes</h4>
+            <h4 class="text-break text-center">Cadastro de Fornecedor</h4>
             <p class="p-1"></p>
 
             <!-- primeira linha -->
             <div class="row">
                 <div class="col-sm-7">
-                    <label>Nome Completo*</label>
+                    <label>CNPJ*</label>
                     <input type="text" class="form-control is valid form-control-md" id="validationdefault01"
-                        name="nome" placeholder="Digite seu nome" required><br>
+                        name="cnpj" placeholder="EX.: xx.xxx.xxx/0001-xx"><br>
                 </div>
                 <div class="col-sm">
-                    <label>CPF*</label>
-                    <input type="text" class="form-control is valid form-control-md" id="cpf" name="cpf"
-                        placeholder="EX.:000.000.000-00" maxlength="14" required><br>
+                    <label>Nome do Fornecedor*</label>
+                    <input type="text" class="form-control is valid form-control-md" id="nome" name="nome" 
+                        placeholder="Nome do fornecedor" required ><br>
                 </div>
             </div>
-
-            
-
+           
             <!-- segunda linha -->
             <div class="row">
                 <div class="col-sm-6">
-                    <label>E-mail*</label>
+                    <label>Telefone do fornecedor*</label>
                     <input type="text" class="form-control is valid form-control-md" id="validationdefault02"
-                        name="Email" placeholder="exemplo@mail.com" required><br>
+                        name="telefone" placeholder="EX.:(00)90000-0000" required><br>
                 </div>
                 <div class="col-sm">
-                    <label>Telefone*</label>
-                    <input type="text" class="form-control phone-ddd-mask" id="validationdefault07"
-                        name="telefone" placeholder="EX.:(00) 00000-0000" onkeyup="handlePhone(event)" maxlength="15" required>
+                    <label>Nome do gerente*</label>
+                    <input type="text" class="form-control phone-ddd-mask" id="nomegerente"
+                        name="nomegerente" placeholder="Informe o nome do gerente" required>
                 </div>
             </div>
+            <script src= "./main.js"></script>
 
 
             <!-- terceira linha -->
@@ -127,7 +126,7 @@
                 <div class="col-sm-6">
                     <label>CEP*</label>
                     <input type="text" class="form-control is valid form-control-md" id="validationdefault03" name="cep"
-                        placeholder="Digite seu CEP" required>
+                        placeholder="EX.:xx.xxx-xxx" required>
                 </div>
 
                 <div class="col-sm">
@@ -146,31 +145,12 @@
                 </div>
             </div>
             <p class="p-1"></p>
-            <div class="row">
-                <div class="col-sm-12">
-                    <label>Senha*</label>
-                    <input type="password" class="form-control is valid form-control-md" id="validationdefault03"
-                        name="senha" placeholder="Senha" required>
-                </div>
-            </div>
-
-
-            <p class="p-1"></p>
-            <div class="form-check  form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="opcao1">
-                <label class="custom-control-label" for="customControlValidation1">Deseja
-                    receber conteúdo promocional por E-mail/Whatsapp?</label>
-            </div>
             <div class="text-center">
                 <p class="p-1"></p>
                 <button class="btn btn-lg border-none" style="background-color:#c99c5e; color: black; "
                     type="submit">Cadastrar
-                    Usuário</button>
+                    Fornecedor</button>
                 <p class="p-1"></p>
-                <a href="pagelogin.html" style="color:#c99c5e;">Você já tem uma conta? <br>Fazer
-                    login</a>
-
-                <p class="p-3"></p>
             </div>
             </nav>
     </div>
@@ -180,9 +160,7 @@
 
     <footer id="rodapecad" class="col-sm-12">
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
             
-</body >
+</body>
      </html>
