@@ -17,7 +17,7 @@ values ('$nomeproduto','$categoria','$descricao','$preco','$fornecedor','$status
 
 if (mysqli_query($link, $sql)){
 	$_SESSION['msg']="Usuário cadastrado com sucesso";
-		echo 'Cadastrado com sucesso'
+	echo 'Cadastrado com sucesso';
 	//header ('Location: pagelogin.html');//
 }else{
 	echo 'Erro ao cadastrar cliente..';
