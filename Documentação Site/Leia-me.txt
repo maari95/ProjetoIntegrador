@@ -1,6 +1,0 @@
-Dentro desta pasta estão contidos as seguintes documentações:
-
-- Briefing 
-- Dicionário de Dados(Referente ao banco de Dados) 
-- Wireframe (desktop) 
-- Wireframe (Smartphone)
