@@ -1,7 +1,0 @@
-Documentação contida nesta pasta: 
-
-- Modelo físico 
-- Modelo Lógico 
-- Pagina de conexão com o banco
-- Pagina de registro de dados
-- Print modelos/Logico/Conceitual
