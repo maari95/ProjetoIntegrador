@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 26-Jan-2023 às 17:28
--- Versão do servidor: 10.4.24-MariaDB
--- versão do PHP: 8.1.6
+-- Tempo de geração: 27-Jan-2023 às 05:36
+-- Versão do servidor: 10.4.27-MariaDB
+-- versão do PHP: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -43,7 +43,7 @@ CREATE TABLE `cliente` (
   `cep` varchar(10) DEFAULT NULL,
   `estado` char(2) NOT NULL,
   `estatus` varchar(50) DEFAULT 'cliente'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `cliente`
@@ -66,7 +66,7 @@ INSERT INTO `cliente` (`idCliente`, `cpfCliente`, `nomeCliente`, `telefoneClient
 CREATE TABLE `departamento` (
   `idDepartamento` int(10) NOT NULL,
   `nomeDepartamento` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `departamento`
@@ -75,6 +75,22 @@ CREATE TABLE `departamento` (
 INSERT INTO `departamento` (`idDepartamento`, `nomeDepartamento`) VALUES
 (1, 'vendas'),
 (2, 'adm');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `feedback`
+--
+
+CREATE TABLE `feedback` (
+  `expCliente` char(2) DEFAULT NULL,
+  `s_preco` char(2) DEFAULT NULL,
+  `s_atendimento` char(2) DEFAULT NULL,
+  `indicacao` char(2) DEFAULT NULL,
+  `nome_ind` varchar(100) DEFAULT NULL,
+  `telefone_ind` varchar(15) DEFAULT NULL,
+  `sugestao` varchar(125) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -96,7 +112,7 @@ CREATE TABLE `fornecedor` (
   `municipio` varchar(100) NOT NULL,
   `estado` char(2) NOT NULL,
   `cep` varchar(9) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `fornecedor`
@@ -128,7 +144,7 @@ CREATE TABLE `funcionario` (
   `cep` varchar(9) NOT NULL,
   `idDepartamento` int(10) NOT NULL,
   `estatus` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `funcionario`
@@ -150,7 +166,7 @@ CREATE TABLE `itenspedido` (
   `idItensPedido` int(10) NOT NULL,
   `idPedido` int(10) NOT NULL,
   `idProduto` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `itenspedido`
@@ -171,7 +187,7 @@ CREATE TABLE `pedido` (
   `dataPedido` datetime NOT NULL,
   `idCliente` int(10) NOT NULL,
   `idFuncionario` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `pedido`
@@ -193,7 +209,7 @@ CREATE TABLE `produto` (
   `descricao` varchar(200) DEFAULT NULL,
   `preco` decimal(10,0) NOT NULL,
   `idFornecedor` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `produto`
