@@ -33,12 +33,12 @@
             </ul>
     </nav>
     <div class="container text-center">
-        <img src="img/icon.png" width=8% height=8% class="rounded" alt="...">
+        <img src="img/cachorro-quente.png" width=8% height=8% class="rounded" alt="...">
     </div>
     <div class="container-fluid col-sm-4 text-break">
 
         <!-- Inicio do formulário -->
-        <form action="registrocliente.php" method="post" id="formRegistro" class="cad">
+        <form action="registroproduto.php" method="post" id="formRegistro" class="cad">
             <p class="p-1"></p>
 
             <h4 class="text-break text-center">Cadastro de produto</h4>
@@ -49,11 +49,11 @@
                 <div class="col-sm-7">
                     <label>Nome do Produto*</label>
                     <input type="text" class="form-control is valid form-control-md" id="validationdefault01"
-                        name="nome" placeholder="Nome do produto" required><br>
+                        name="nomeproduto" placeholder="Nome do produto" required><br>
                 </div>
                 <div class="col-sm">
                     <label>Categoria*</label>
-                    <input type="text" class="form-control is valid form-control-md" id="cpf" name="cpf" 
+                    <input type="text" class="form-control is valid form-control-md" id="categoria" name="categoria" 
                         placeholder="Principal, Acompanhamento e Bebida" maxlength="14" autocomplet="off"  onkeypress="return somenteNumeros(charCode)" required ><br>
                 </div>
             </div>
@@ -65,12 +65,12 @@
                 <div class="col-sm-6">
                     <label>Descrição*</label>
                     <input type="text" class="form-control is valid form-control-md" id="validationdefault02"
-                        name="Email" placeholder="exemplo@mail.com" required><br>
+                        name="descricao" placeholder="Descrição do produto" required><br>
                 </div>
                 <div class="col-sm">
                     <label>Preço*</label>
                     <input type="text" class="form-control phone-ddd-mask" id="tel"
-                        name="telefone" placeholder="EX.:(00) 00000-0000" required>
+                        name="preco" placeholder="EX.:(00) 00000-0000" required>
                 </div>
             </div>
             <script src= "./main.js"></script>
@@ -79,7 +79,7 @@
             <!-- terceira linha -->
             <div class="col-sm">
                 <label>Fornecedor</label>    
-                <select name="departamento" class="form-select form-select-md">
+                <select name="fornecedor" class="form-select form-select-md">
                     <option selected>Selecione</option>
                     <option value="2">Laticínios Milano</option>
                     <option value="3">Adm</option>
@@ -92,7 +92,7 @@
                 <p class="p-1"></p>
                 <button class="btn btn-lg border-none" style="background-color:#c99c5e; color: black; "
                     type="submit">Cadastrar
-                    Usuário</button>
+                    Produto</button>
                 <p class="p-1"></p>
                 
 
