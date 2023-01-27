@@ -95,14 +95,10 @@ CREATE TABLE feedback(
 expCliente char(2), 
 s_preco char(2),
 s_atendimento char (2),
-indicacao chat(2),
+indicacao char(2),
 nome_ind varchar(100), 
 telefone_ind varchar(15), 
-sugestao varchar(125),
-idCliente int(10) not null, 
- FOREIGN KEY (idCliente) REFERENCES cliente (idCliente)
-ON DELETE RESTRICT
-ON UPDATE CASCADE
+sugestao varchar(125)
 )ENGINE = INNODB;
 
 
