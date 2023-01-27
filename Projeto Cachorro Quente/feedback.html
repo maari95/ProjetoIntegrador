@@ -4,15 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" media="screem">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback</title>
     <link rel="icon" href="icon/LOGO.png">
     <link rel="stylesheet" type="text/css" href="css/Base.css">
     <!-- a biblioteca do query deve ser inserida antes da bilbioteca do Bootstrap-->
     <script type="text/javascript" src="js/jquery3.6.1.min"></script>
-    <!--
-    Formatação do Menu com o a Tan NAV e recursos de dropdown do Bootestrap
-  -->
+    
 
     <!--URL para pegar os links abaixo: https://getbootstrap.com.br/docs/4.1/getting-started/introduction/-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -27,8 +25,8 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
     
-    <style>
-    </style>
+    
+    
 
         
 <nav class="nav nav-pills justify-content-start">
@@ -46,7 +44,8 @@
 </head>
 <header>    
 </header>
-<body id="corpo"></body>
+
+<body id="corpo">
 <style>
     body{
         background-image: url('img/background.webp');
@@ -57,7 +56,7 @@
             <div class="col-sm-12">
               <h3 style="color: #c99c5e; font-family: Constantia; font-size: 50px; text-align: center;">Feedback do Cliente</h3>
                 <p class="p-1"></p> 
-                    <p style="color: #c99c5e; font-family: Constantia; font-size:18px; text-align: center;"> Gostaríamos de saber seu feedback sobre nossos produtos, preenchendo este curto formulário de feedback.<br> Estamos conduzindo essa pesquisa para saber o nível de satisfação com a qualidade de nossos serviços.</p>
+                    <p style="color: #c99c5e; font-family: Constantia; font-size:25px; text-align: center;"> Gostaríamos de saber seu feedback sobre nossos produtos, preenchendo este curto formulário de feedback.<br> Estamos conduzindo essa pesquisa para saber o nível de satisfação com a qualidade de nossos serviços.</p>
 </div>
 </div>
 </div>
@@ -67,12 +66,14 @@
 <p class="p-1"></p> 
 
 <!-- Subtítulo -->
-  <div class="container border border-warning">
+
+<div class="container border border-warning">
+<div class="row">
     <div class="col-sm-12">
     <form action="registrofeed.php" method="post"  id="frmRegistroFeed" style="color: #c99c5e; padding: 40px;">
     <div class="row">
       <div class="col-sm-12 text-start">
-        <div class="h4 pb-2 mb-4 border-bottom border-warning">
+        <div class="h3 pb-2 mb-4 border-bottom border-warning">
           Experiência geral com os Serviços Oferecidos:
         </div>
         <p class="p-1"></p>
@@ -80,7 +81,7 @@
 
     <!-- Coluna 1 -->
       <div class="col-sm-4">
-       <label class="form-check-label" for="inlineRadio1">Bom</label>
+       <label class="form-check-label" for="inlineRadio1" style="font-size: larger;">Bom</label>
          <p class="p-1"></p>
           <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="experiencia" id="inlineRadio1" value="B">
@@ -88,7 +89,7 @@
               </div>
      <!-- Coluna 2 -->
     <div class="col-sm-4">
-      <label class="form-check-label" for="inlineRadio1">Regular</label>
+      <label class="form-check-label" for="inlineRadio1"  style="font-size: larger;">Regular</label>
       <p class="p-1"></p>
         <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="experiencia" id="inlineRadio1" value="S">
@@ -96,7 +97,7 @@
     </div>
     <!-- Coluna 3 -->
   <div class="col-sm-4">
-    <label class="form-check-label" for="inlineRadio1">Ruim</label>
+    <label class="form-check-label" for="inlineRadio1" style="font-size: larger">Ruim</label>
       <p class="p-1"></p>
        <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="experiencia" id="inlineRadio1" value="R">
@@ -110,7 +111,7 @@
 <p class="p-2"></p>
 <div class="row">
 <div class="col-sm-12 text-start">
-<div class="h4 pb-2 mb-4 border-bottom border-warning">
+<div class="h3 pb-2 mb-4 border-bottom border-warning">
 Como você classificaria nossos preços?
 </div>
 
@@ -118,7 +119,7 @@ Como você classificaria nossos preços?
 </div>
 <!-- Coluna 1   -->
 <div class="col-sm-4">
-<label class="form-check-label" for="inlineRadio2">Bons</label>
+<label class="form-check-label" for="inlineRadio2" style="font-size: larger;">Bons</label>
 <p class="p-1"></p>
 <div class="form-check form-check-inline">
 <input class="form-check-input" type="radio" name="preco" id="inlineRadio2" value="B">
@@ -126,7 +127,7 @@ Como você classificaria nossos preços?
     </div>
 <!-- Coluna 2 -->
  <div class="col-sm-4">
-  <label class="form-check-label" for="inlineRadio1">Razoáveis</label>
+  <label class="form-check-label" for="inlineRadio1" style="font-size: larger;">Razoáveis</label>
   <p class="p-1"></p>
   <div class="form-check form-check-inline">
     <input class="form-check-input" type="radio" name="preco" id="inlineRadio2" value="S">
@@ -134,7 +135,7 @@ Como você classificaria nossos preços?
     </div>
 <!-- Coluna 3 -->
 <div class="col-sm">
-  <label class="form-check-label" for="inlineRadio1">Ruins</label>
+  <label class="form-check-label" for="inlineRadio1" style="font-size: larger;">Ruins</label>
   <p class="p-1"></p>
     <div class="form-check form-check-inline">
       <input class="form-check-input" type="radio" name="preco" id="inlineRadio2" value="R">
@@ -147,14 +148,14 @@ Como você classificaria nossos preços?
 <p class="p-2"></p>
   <div class="row">
     <div class="col-sm-12 text-start">
-      <div class="h4 pb-2 mb-4 border-bottom border-warning">
+      <div class="h3 pb-2 mb-4 border-bottom border-warning">
         O quanto você está satisfeito com nosso atendimento?
         </div>
          <p class="p-1"></p>
     </div>
     <!-- Coluna 1 -->
             <div class="col-sm-4">
-            <label class="form-check-label" for="inlineRadio1">Muito Satisfeito</label>
+            <label class="form-check-label" for="inlineRadio1" style="font-size: larger;">Muito Satisfeito</label>
              <p class="p-1"></p>
               <div class="form-check form-check-inline">
                 <input class="form-check-input" type="radio" name="satisfacao" id="inlineRadio3" value="MS">
@@ -162,7 +163,7 @@ Como você classificaria nossos preços?
     </div>
     <!-- Coluna 2  -->
   <div class="col-sm-4">
-     <label class="form-check-label" for="inlineRadio1">Neutro</label>
+     <label class="form-check-label" for="inlineRadio1" style="font-size: larger;">Neutro</label>
         <p class="p-1"></p>
           <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="satisfacao" id="inlineRadio3" value="N">
@@ -170,7 +171,7 @@ Como você classificaria nossos preços?
     </div>
     <!-- Coluna 3 -->
 <div class="col-sm">
-  <label class="form-check-label" for="inlineRadio1">Ruim</label>
+  <label class="form-check-label" for="inlineRadio1" style="font-size: larger;">Ruim</label>
     <p class="p-1"></p>
       <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="satisfacao" id="inlineRadio3" value="R">
@@ -184,27 +185,27 @@ Como você classificaria nossos preços?
   <p class="p-2"></p>
   <div class="row">
     <div class="col-sm-12 text-start">
-      <div class="h4 pb-2 mb-4 border-bottom border-warning">
+      <div class="h3 pb-2 mb-4 border-bottom border-warning">
       Você recomendaria nossos produtos/serviços para outras pessoas?
       </div>
      <p class="p-1"></p>
     </div>
   <div class="col-sm-4">
-    <label class="form-check-label" for="inlineRadio1">Sim</label>
+    <label class="form-check-label" for="inlineRadio1" style="font-size: larger;">Sim</label>
       <p class="p-1"></p>    
         <div class="form-check form-check-inline">
          <input class="form-check-input" type="radio" name="indicacao" id="inlineRadio4" value="S">
    </div>
   </div>
   <div class="col-sm-4">
-    <label class="form-check-label" for="inlineRadio1">Talvez</label>
+    <label class="form-check-label" for="inlineRadio1" style="font-size: larger;">Talvez</label>
       <p class="p-1"></p>    
         <div class="form-check form-check-inline">
          <input class="form-check-input" type="radio" name="indicacao" id="inlineRadio4" value="T">
         </div>
       </div>
    <div class="col-sm">
-    <label class="form-check-label" for="inlineRadio1">Não</label>
+    <label class="form-check-label" for="inlineRadio1" style="font-size: larger;">Não</label>
       <p class="p-1"></p>  
       <div><div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="indicacao" id="inlineRadio4" value="N">
@@ -214,29 +215,28 @@ Como você classificaria nossos preços?
 </div>
 </div>
 </div>
+<div class="row">
 <div class="col-sm-12">
 <p class="p-2"></p> 
-<div class="h4 pb-2 mb-4 border-bottom border-warning">
+<div class="h3 pb-2 mb-4 border-bottom border-warning">
   Você foi indicado por alguém?<small> (Conte-nos)</small>
   </div>
   <div class="row">
     <div class="col-sm-6">
      <p class="p-0.5"></p>
-        <label>Nome da pessoa que te indicou</label>
+        <label style="font-size: larger;">Nome da pessoa que te indicou</label>
                  <input class="form-control form-control-sm" type="text" placeholder="Nome" name="nome_ind" aria-label="text input">
               </div>
         <div class="col-sm-6">
           <p class="p-0.5"></p>
- <label>Telefone</label>
+ <label style="font-size: larger;">Telefone</label>
   <input class="form-control form-control-sm" type="text" placeholder="Telefone" name="telefone_ind" aria-label="text input">
 </div>
 </div>
 <div class="row">
   <div class="col-sm-12">
 <p class="p-2"></p>
-<label>Deseja fazer alguma sugestão? <small>(Opcional)</small></label>
-<br>
-<p class="p-0.5"></p>
+<label style="font-size: larger;">Deseja fazer alguma sugestão?<small>(Opcional)</small></label>
 <div class="form-floating">
    <textarea class="form-control" maxlength=125 placeholder="Deixe seu comentário aqui" name="sugestao" style="height: 60px";></textarea>
    <small>Limite de 125 caracteres</small>
@@ -255,8 +255,8 @@ Como você classificaria nossos preços?
 </div>
 </div>
 </form>
-
-
+</div>
+</div>
 <p class="p-1"></p> 
     <div class="row">
         <div class="col-md-12 text-center">
