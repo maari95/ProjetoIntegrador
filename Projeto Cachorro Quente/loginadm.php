@@ -14,7 +14,7 @@ if(mysqli_num_rows($resultado) > 0)
 {
     $_SESSION['emailFuncionario'] = $email;
     $_SESSION['senhaFuncionario'] = $senha;
-    header('location:index.html');
+    header('location:homeAdm.html');
 }else{
     unset($_SESSION['emailFuncionario']);
     unset($_SESSION['senhaFuncionario']);
