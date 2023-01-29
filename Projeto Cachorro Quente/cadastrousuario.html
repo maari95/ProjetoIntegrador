@@ -41,7 +41,7 @@
         <form action="registrocliente.php" method="post" id="formRegistro" class="cad">
             <p class="p-1"></p>
 
-            <h4 class="text-break text-center">Cadastro de Clientes</h4>
+            <h4 class="text-break text-center">Cadastro de Cliente</h4>
             <p class="p-1"></p>
 
             <!-- primeira linha -->
@@ -49,12 +49,12 @@
                 <div class="col-sm-7">
                     <label>Nome Completo*</label>
                     <input type="text" class="form-control is valid form-control-md" id="validationdefault01"
-                        name="nome" placeholder="Digite seu nome" required><br>
+                        name="nome" placeholder="Digite seu nome" autocomplete="off" keypress="somenteNumeros" required><br>
                 </div>
                 <div class="col-sm">
                     <label>CPF*</label>
                     <input type="text" class="form-control is valid form-control-md" id="cpf" name="cpf"
-                        placeholder="EX.:000.000.000-00" autocomplete="off" maxlength="14" required><br>
+                        placeholder="EX.:000.000.000-00" keypress-="somenteNumeros" autocomplete="off" maxlength="14" required><br>
                 </div>
             </div>
 
@@ -65,12 +65,12 @@
                 <div class="col-sm-6">
                     <label>E-mail*</label>
                     <input type="text" class="form-control is valid form-control-md" id="validationdefault02"
-                        name="Email" placeholder="exemplo@mail.com" required><br>
+                        name="Email" placeholder="exemplo@mail.com" autocomplete="off" required><br>
                 </div>
                 <div class="col-sm">
                     <label>Telefone*</label>
-                    <input type="text" class="form-control phone-ddd-mask" id="validationdefault07"
-                        name="telefone" placeholder="EX.:(00) 00000-0000" onkeyup="handlePhone(event)" maxlength="15" required>
+                    <input type="text" class="form-control phone-ddd-mask" id="tel"
+                        name="telefone" placeholder="EX.:(00) 00000-0000" autocomplete="off"  keypress="somenteNumeros" onkeyup="formatarTelefone(event)" maxlength="14" required>
                 </div>
             </div>
 
@@ -80,12 +80,12 @@
                 <div class="col-sm-6">
                     <label>Tipo de Logradouro*</label>
                     <input type="text" class="form-control is valid form-control-md" id="validationdefault06"
-                        name="tp_logradouro" placeholder="Rua, Av.,Travessa, etc" required><br>
+                        name="tp_logradouro" placeholder="Rua, Av.,Travessa, etc" autocomplete="off" required><br>
                 </div>
                 <div class="col-sm">
                     <label>Logradouro*</label>
                     <input type="text" class="form-control is valid form-control" id="validationdefault03"
-                        name="logradouro" placeholder="Nome do logradouro" required><br>
+                        name="logradouro" placeholder="Nome do logradouro" autocomplete="off" required><br>
                 </div>
             </div>
 
@@ -95,12 +95,12 @@
 
                     <label>Número*</label>
                     <input type="text" class="form-control is valid form-control-md" id="validationdefault03"
-                        name="numero" placeholder="Número" required><br>
+                        name="numero" placeholder="Número" autocomplete="off" required><br>
                 </div>
                 <div class="col-sm">
                     <label>Complemento</label>
                     <input type="text" class="form-control form-control-md" name="complemento"
-                        placeholder="Complemento">
+                        placeholder="Complemento" autocomplete="off">
                     <br>
                 </div>
             </div>
@@ -111,12 +111,12 @@
                 <div class="col-sm-6">
                     <label>Bairro*</label>
                     <input type="text" class="form-control is valid form-control-md" id="validationdefault03"
-                        name="bairro" placeholder="Bairro" required>
+                        name="bairro" placeholder="Bairro" autocomplete="off" required>
                 </div>
                 <div class="col-sm">
                     <label>Município*</label>
                     <input type="text" class="form-control is valid form-control-md" id="validationdefault03"
-                        name="municipio" placeholder="Município" required>
+                        name="municipio" placeholder="Município" autocomplete="off" required>
                 </div>
             </div>
 
@@ -126,15 +126,15 @@
             <div class="row">
                 <div class="col-sm-6">
                     <label>CEP*</label>
-                    <input type="text" class="form-control is valid form-control-md" id="validationdefault03" name="cep"
-                        placeholder="Digite seu CEP" autocomplete="off" maxlength="9" required>
+                    <input type="text" class="form-control is valid form-control-md" id="cep" name="cep"
+                        placeholder="Digite seu CEP" keypress="somenteNumeros" onkeyup="formatarCep(event)" autocomplete="off" maxlength="9" required>
                 </div>
 
                 <div class="col-sm">
                     <label>Estado*</label>
                     <!--<select class="form-select form-select-md">-->
                     <input type="text" class="form-control is valid form-control-md" id="validationdefault03"
-                        name="estado" placeholder="Sigla do estado" required>
+                        name="estado" placeholder="Sigla do estado" autocomplete="off" maxlength="2" required>
                     <!--<option selected>Selecione</option>
                                         <option value="1">ES</option>
                                             <option value="2">MG</option>
