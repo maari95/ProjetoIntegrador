@@ -9,7 +9,7 @@ input.addEventListener('keypress', () =>{
         input.value += '-'
     }
 })
-const inputnum = document.getElementById("#cpf");
+const inputnum = document.getElementById("#cpf" , "#cep" , "#tel" , "#cnpj");
 
 input.addEventListener("keypress", somenteNumeros);
 
@@ -35,7 +35,7 @@ e.preventDefault();
  
  }
 
- const inputel = document.getElementById('#tel');
+ const inputtel = document.getElementById('#tel');
 
 input.addEventListener("keyup",  "keypress", formatarTelefone);
 
@@ -50,4 +50,22 @@ v=v.replace(/(\d{5})(\d)/,"$1-$2");
 e.target.value = v;
 }
 
+const inputpj= document.getElementById('#cnpj');
+input.addEventListener("keyup", "keypress", formatarCNPJ);
+function formatarCNPJ(e){
 
+var v= e.target.value.replace(/\D/g,"");
+
+v=v.replace(/^(\d{2})(\d)/,"$1.$2");
+
+v=v.replace(/^(\d{2})\.(\d{3})(\d)/,"$1.$2.$3");
+
+v=v.replace(/\.(\d{3})(\d)/,".$1/$2");
+
+v=v.replace(/(\d{4})(\d)/,"$1-$2");  
+
+e.target.value = v;
+
+ 
+
+}
