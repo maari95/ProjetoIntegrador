@@ -97,7 +97,7 @@
                     <label>CPF*</label>
                     <input type="text" class="form-control is valid form-control-md" id="cpf" name="cpf"
                         placeholder="EX.:000.000.000-00" maxlength="14" autocomplet="off"
-                        onkeypress="return somenteNumeros(charCode)" required><br>
+                        keypress="somenteNumeros" required><br>
                 </div>
                 <div class="col-sm">
                     <label>Departamento</label>    
@@ -122,8 +122,8 @@
                 </div>
                 <div class="col-sm">
                     <label>Telefone*</label>
-                    <input type="text" class="form-control phone-ddd-mask" id="tel" name="telefone"
-                        placeholder="EX.:(00) 00000-0000" required>
+                    <input type="tel" class="form-control" id="tel" name="telefone"
+                        placeholder="EX.:(00) 00000-0000" autocomplete="off" keypress="somenteNumeros" maxlength="14" onkeyup="formatarTelefone(event)" required>
                 </div>
             </div>
             <script src="./main.js"></script>
@@ -181,14 +181,14 @@
                 <div class="col-sm-6">
                     <label>CEP*</label>
                     <input type="text" class="form-control is valid form-control-md" id="validationdefault03" name="cep"
-                        placeholder="Digite seu CEP" required>
+                        placeholder="Digite seu CEP" autocomplete="off" onkeyup="formatarCep(event)" maxlength="9" keypress="somenteNumeros" required>
                 </div>
 
                 <div class="col-sm">
                     <label>Estado*</label>
                     <!--<select class="form-select form-select-md">-->
                     <input type="text" class="form-control is valid form-control-md" id="validationdefault03"
-                        name="estado" placeholder="Sigla do estado" required>
+                        name="estado" placeholder="Sigla do estado" maxlength="2" required>
                     </div>
             </div>
             <p class="p-1"></p>
