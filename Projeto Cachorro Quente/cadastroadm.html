@@ -12,8 +12,8 @@
     <link rel="icon" href="icon/LOGO.png">
 
     <title>Cadastro de Administrador</title>
-    <br>
-    <img src="img/LOGO1.webp" width="9%" height="9%" align="right">
+    
+    <!-- <img src="img/LOGO1.webp" width="9%" height="9%" align="right"> -->
 
 </head>
 
@@ -23,17 +23,59 @@
             background-image: url('img/background.webp');
         }
     </style>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Main navigation">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="homeAdm.html"><img src="icon/LOGO.png" width="90%" height="90%"></a>
+      <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="homeAdm.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Editar Perfil</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Cadastro</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="cadastroadm.html">Cadastro de Administrador</a></li>
+              <li><a class="dropdown-item" href="cadastrofornecedor.html">Cadastro de Fornecedor</a></li>
+              <li><a class="dropdown-item" href="cadastroproduto.html">Cadastro de Produto</a></li>
+             
+            </ul>
+          </li>
+         </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Pesquisa" aria-label="Search">
+          <button class="btn btn-outline-warning" type="submit">Buscar</button>
+        </form>
+        </div>
+       
+    </div>
+    <p class="p-2"></p>
+    <p class="p-2"></p>
+    <a href="admin.html"><img src="icon/logout.png" width="32px" height="32px"></a>
+    <p class="p-2"></p>
+  </nav>
 
-    <nav class="nav nav-pills justify-content-start">
+
+<p class="p-2"></p>
+<p class="p-2"></p>
+
+
+    <!-- <nav class="nav nav-pills justify-content-start">
         <a class="navbar-brand" href="admin.html">
             <a style="width: 50px; height: 50px; margin: 10px; margin-top: 5px;background:0;"
                 class="nav-link nav-button active" href="admin.html"><img src="img/seta_esquerda.png" width="50rem"
                     height="50rem"></a>
             </li>
-            </ul>
+            </ul> -->
     </nav>
     <div class="container text-center">
-        <img src="img/icon.png" width=8% height=8% class="rounded" alt="...">
+        <img src="img/config.png" width=8% height=8% class="rounded" alt="...">
     </div>
     <div class="container-fluid col-sm-4 text-break">
 
@@ -41,7 +83,7 @@
         <form action="registroadm.php" method="post" id="formRegistro" class="cad">
             <p class="p-1"></p>
 
-            <h4 class="text-break text-center">Cadastro Administrador</h4>
+            <h4 class="text-break text-center">Cadastro de Administrador</h4>
             <p class="p-1"></p>
 
             <!-- primeira linha -->
