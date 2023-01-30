@@ -13,7 +13,7 @@ input.addEventListener('keypress', () => {
 })
 
 //apenas numeros
-const inputnum = document.getElementById("#cpf", "#cep", "#tel", "#cnpj");
+const inputnum = document.getElementById("#cpf", "#cep", "#tel", "#cnpj", "#numadm");
 
 input.addEventListener("keypress", somenteNumeros);
 
@@ -58,21 +58,26 @@ function formatarTelefone(e) {
 }
 
 //mascara cnpj//
-const input2 = document.getElementById('#cnpj');
-input.addEventListener("keyup", "keypress", formatarCNPJ);
-function formatarCNPJ(e) {
 
-    var v = e.target.value.replace(/\D/g, "");
 
-    v = v.replace(/^(\d{2})(\d)/, "$1.$2");
+//moeda
+const inputmoeda = document.getElementById("#preco");
 
-    v = v.replace(/^(\d{2})\.(\d{3})(\d)/, "$1.$2.$3");
+input.addEventListener("keyup", formatarMoeda); 
 
-    v = v.replace(/\.(\d{3})(\d)/, ".$1/$2");
+function formatarMoeda(e) {
 
-    v = v.replace(/(\d{4})(\d)/, "$1-$2");
+var v = e.target.value.replace(/\D/g,"");
 
-    e.target.value = v;
+v = (v/100).toFixed(2) + "";
+
+v = v.replace(".", ",");
+
+v = v.replace(/(\d)(\d{3})(\d{3}),/g, "$1.$2.$3,");
+
+v = v.replace(/(\d)(\d{3}),/g, "$1.$2,");
+
+e.target.value = v;
 
 }
 
