@@ -13,7 +13,7 @@ input.addEventListener('keypress', () => {
 })
 
 //apenas numeros
-const inputnum = document.getElementById("#cpf", "#cep", "#tel", "#cnpj", "#numadm");
+const inputnum = document.getElementById("#cpf", "#cep", "#tel", "#cnpj");
 
 input.addEventListener("keypress", somenteNumeros);
 
