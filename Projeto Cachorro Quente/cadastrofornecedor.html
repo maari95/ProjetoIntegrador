@@ -101,8 +101,8 @@
             <div class="row">
                 <div class="col-sm-6">
                     <label>Telefone do fornecedor*</label>
-                    <input type="tel" class="form-control is valid form-control-md" id="tel"
-                        name="telefone" placeholder="EX.:(00) 00000-0000" onkeyup="formatarTelefone(event)" keypress="somenteNumeros" maxlength="15" required><br>
+                    <input type="tel" class="form-control is valid form-control-md" id="validationdefault02"
+                        name="telefone" placeholder="EX.:(00) 00000-0000" maxlength="15" required><br>
                 </div>
                 <div class="col-sm">
                     <label>Nome do gerente*</label>
@@ -165,13 +165,13 @@
                 <div class="col-sm-6">
                     <label>CEP*</label>
                     <input type="text" class="form-control is valid form-control-md" id="validationdefault03" name="cep"
-                        placeholder="EX.:xx.xxx-xxx" onkeyup="formatarCep(event)" keypress="somenteNumeros" maxlength="9" required>
+                        placeholder="EX.:xx.xxx-xxx" required>
                 </div>
 
                 <div class="col-sm">
                     <label>Estado*</label>
                     <input type="text" class="form-control is valid form-control-md" id="validationdefault03"
-                        name="estado" placeholder="Sigla do estado" maxlength="2" required>
+                        name="estado" placeholder="Sigla do estado" required>
                     
                     </select>
 
@@ -191,10 +191,22 @@
     </form>
     </div>
 <p class="p-2"></p>
-    <footer style="background-color: black; width: 100%; height:160px; bottom: 0; margin-top: 5px; text-align: center;">
-    <h6 style="color:white; padding:70px;"><small>Senac &copy; 2023</small></h6>
-    </footer>
-    <script src= "./mascaras.js"></script>
+   
+<div class="row">
+    <div class="col-md text-center">
+     <footer style="background: black; height: 20rem;">
+<p class="p-1"></p>
+<a href="#"><img id="zap" src="icon/whatsapp.png" align="center"></a>
+<a href="https://www.instagram.com/dog_primeartesanal/" target="_self"><img id="insta" src="icon/instagram.png"align="center"></a>
+<a href="#" target="_self" ><img id="ifood"src="icon/logo-ifood-256.png"align="center" widht="5%" height="5%"></a>
+<h6 style="color:white; padding:70px;"><small>Senac &copy; 2023</small></h6>
+  </div>
+
+</footer>
+
+</div>
+</div>
+    <script src= "./main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
             
 </body>
