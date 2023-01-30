@@ -88,7 +88,7 @@
                 <div class="col-sm-7">
                     <label>CNPJ*</label>
                     <input type="text" class="form-control is valid form-control-md" id="cnpj"
-                        name="cnpj" placeholder="EX.: xx.xxx.xxx/0001-xx" onkeyup="formatarCNPJ(event)" keypress="somenteNumeros" autocomplete="off" maxlength="18" required><br>
+                        name="cnpj" placeholder="EX.: xx.xxx.xxx/0001-xx" onkeyup="cnpj(event)" keypress="somenteNumeros" autocomplete="off" maxlength="18" required><br>
                 </div>
                 <div class="col-sm">
                     <label>Nome do Fornecedor*</label>
@@ -171,7 +171,7 @@
                 <div class="col-sm">
                     <label>Estado*</label>
                     <input type="text" class="form-control is valid form-control-md" id="validationdefault03"
-                        name="estado" placeholder="Sigla do estado" required>
+                        name="estado" placeholder="Sigla do estado" maxlength="2" required>
                     
                     </select>
 
