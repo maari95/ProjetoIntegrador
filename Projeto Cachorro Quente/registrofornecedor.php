@@ -23,10 +23,10 @@ $sql = "insert into fornecedor(cnpj,nomeFornecedor,telefoneFornecedor,nomeGerent
 values ('$cnpj','$nome','$telefone','$nomegerente','$tp_logradouro','$logradouro','$numero','$complemento','$bairro','$municipio','$cep','$estado','$status')";
 
 if (mysqli_query($link, $sql)){
-	$_SESSION['msg']="Usuário cadastrado com sucesso";
-	echo 'Cadastrado com sucesso !';
-	//header ('Location: pagelogin.html');//
+	$_SESSION['msg']="Fornecedor cadastrado com sucesso";
+	echo 'Cadastrado Com Sucesso !';
+	header ('Location: homeAdm.html');
 }else{
-	echo 'Erro ao cadastrar cliente..';
+	echo 'Erro Ao Cadastrar Fornecedor..';
 }
 ?>
