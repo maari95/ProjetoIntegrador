@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 27-Jan-2023 às 05:36
+-- Tempo de geração: 31-Jan-2023 às 00:50
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.1.12
 
@@ -53,9 +53,9 @@ INSERT INTO `cliente` (`idCliente`, `cpfCliente`, `nomeCliente`, `telefoneClient
 (1, '123.456.789-10', 'Fulano', '(21)91234-5678', 'fulano@gmail.com', 'hotdog123', 'rua', 'General Baiano', '934', 'ap101', 'Miguel Couto', 'Nova Iguaçu', '26-157.000', 'RJ', 'cliente'),
 (2, '123.456.789-11', 'Ciclano', '(21)91234-6789', 'ciclano@gmail.com', 'pizza123', 'Avenida', 'Itapemerim', '123', 'fundos', 'Luiz de Lemos', 'Nova Iguaçu', '16-153.000', 'RJ', 'cliente'),
 (3, '111.111.111-11', 'joao pedro', '(21)94002-8922', 'pizza@gmail.com', '1234', 'rua', 'livia guida', '-4', 'ap', 'dA LUZ', 'nova iguaçu', '35.165-000', 'RJ', 'cliente'),
-(4, '', '', '', '', '', '', '', '', '', '', '', '', '', 'cliente'),
 (5, '512.976.125-95', 'gb', '(21) 95417-9854', 'gbzada@gmail.com', '78945', 'Av.', 'Cabral', '511', '', 'Santo elias', 'Mesquita', '12.497-451', 'RJ', 'cliente'),
-(8, '789.456.123-32', 'Joao Pedro', '(21)94002-8922', 'dog@gmail.com', 'zorro', 'Rua', 'Livia Guida', '434', 'ap101', 'Boa Esperança', 'Nova Iguaçu', '26.165-000', 'RJ', 'cliente');
+(8, '789.456.123-32', 'Joao Pedro', '(21)94002-8922', 'dog@gmail.com', 'zorro', 'Rua', 'Livia Guida', '434', 'ap101', 'Boa Esperança', 'Nova Iguaçu', '26.165-000', 'RJ', 'cliente'),
+(15, '169.674.737-60', 'Marina', '(21)97574-7511', 'marinagomes1@gmail.com', '123456', 'Rua', 'Candida pires', '606', 'Fundos', 'Vila Rosali', 'São João', '25525-010', 'RJ', 'cliente');
 
 -- --------------------------------------------------------
 
@@ -111,15 +111,18 @@ CREATE TABLE `fornecedor` (
   `bairro` varchar(100) NOT NULL,
   `municipio` varchar(100) NOT NULL,
   `estado` char(2) NOT NULL,
-  `cep` varchar(9) NOT NULL
+  `cep` varchar(9) NOT NULL,
+  `estatus` varchar(50) DEFAULT 'fornecedor'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `fornecedor`
 --
 
-INSERT INTO `fornecedor` (`idFornecedor`, `cnpj`, `nomeFornecedor`, `telefoneFornecedor`, `nomeGerente`, `tipoLogradouro`, `logradouro`, `numero`, `complemento`, `bairro`, `municipio`, `estado`, `cep`) VALUES
-(2, '12.345.678/0001-91', 'Latícinios Milano', '(21)91234-9876', 'Danilo', 'rua', 'Dr.Cunha', '45', 'ap101', 'centro', 'Nova Iguaçu', 'RJ', '12-159.00');
+INSERT INTO `fornecedor` (`idFornecedor`, `cnpj`, `nomeFornecedor`, `telefoneFornecedor`, `nomeGerente`, `tipoLogradouro`, `logradouro`, `numero`, `complemento`, `bairro`, `municipio`, `estado`, `cep`, `estatus`) VALUES
+(1, '12.345.678/0001-91', 'Latícinios Milano', '(21)91234-9876', 'Danilo', 'rua', 'Dr.Cunha', '45', 'ap101', 'centro', 'Nova Iguaçu', 'RJ', '12-159.00', 'fornecedor'),
+(2, '121212121212121212', 'juliana', '21975747511', 'pedro', 'rua', 'ni', '86', 'f', 'centro', 'rj', 'RJ', '54545122', 'fornecedor'),
+(3, '548712124664451111', 'Marina', '21975747511', 'JOÃO', 'rua', 'candida pires', '606', '', 'centro', 'sjm', 'RJ', '25525010', 'fornecedor');
 
 -- --------------------------------------------------------
 
@@ -154,7 +157,8 @@ INSERT INTO `funcionario` (`idFuncionario`, `cpfFuncionario`, `nomeFuncionario`,
 (1, '987.654.321.98', 'Gabriel', '(21)99876-5432', 'gabriel@gmail.com', 'gbzada123', 'rua', 'livia guida', '974', 'ap101', 'Miguel Couto', 'Nova Iguaçu', '26', 'RJ', 1, NULL),
 (5, '789.456.123-33', 'Gabriel', '(21)94002-8922', 'hotdog@gmail.com', '7894', 'Rua', 'Livia Guida', '434', 'ap101', 'Boa Esperança', 'Nova Iguaçu', 'RJ', '26.165-00', 1, 'adm'),
 (9, '111.233.556-45', 'Marina', '(21)98888-7777', 'marina@gmail.com', '123', 'rua', 'flores', '125', '', 'centro', 'nova iguacu', 'rj', '20.500.50', 2, 'adm'),
-(12, '999.555.666-77', 'Joao Pedro', '(21)94002-8922', 'pedrof@gmail.com', 'pizza', 'Rua', 'Livia Guida', '434', 'ap101', 'Boa Esperança', 'Nova Iguaçu', 'RJ', '26.165-00', 1, 'adm');
+(12, '999.555.666-77', 'Joao Pedro', '(21)94002-8922', 'pedrof@gmail.com', 'pizza', 'Rua', 'Livia Guida', '434', 'ap101', 'Boa Esperança', 'Nova Iguaçu', 'RJ', '26.165-00', 1, 'adm'),
+(13, '169.674.737-60', 'Marina', '(21)97517-4751', 'marina@mail.com', '456789', 'rua', 'candida pires', '606', 'fundos', 'centro', 'são joão de meriti', 'RJ', '25525-010', 2, 'adm');
 
 -- --------------------------------------------------------
 
@@ -208,16 +212,18 @@ CREATE TABLE `produto` (
   `categoria` varchar(100) NOT NULL,
   `descricao` varchar(200) DEFAULT NULL,
   `preco` decimal(10,0) NOT NULL,
-  `idFornecedor` int(10) NOT NULL
+  `idFornecedor` int(10) NOT NULL,
+  `estatus` varchar(50) DEFAULT 'produto'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `produto`
 --
 
-INSERT INTO `produto` (`idProduto`, `nomeProduto`, `categoria`, `descricao`, `preco`, `idFornecedor`) VALUES
-(1, 'HotDog de cafta', 'principal', 'Carne, cebolas carameladas, bacon', '20', 2),
-(2, 'Pepsi', 'bebida', 'Pepsi 2L', '10', 2);
+INSERT INTO `produto` (`idProduto`, `nomeProduto`, `categoria`, `descricao`, `preco`, `idFornecedor`, `estatus`) VALUES
+(1, 'HotDog de cafta', 'principal', 'Carne, cebolas carameladas, bacon', '20', 1, NULL),
+(2, 'Pepsi', 'bebida', 'Pepsi 2L', '10', 1, NULL),
+(4, 'salsicha', 'principal', 'salsicha perdigao', '10', 2, 'produto');
 
 --
 -- Índices para tabelas despejadas
@@ -286,7 +292,7 @@ ALTER TABLE `produto`
 -- AUTO_INCREMENT de tabela `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `idCliente` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `idCliente` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de tabela `departamento`
@@ -298,13 +304,13 @@ ALTER TABLE `departamento`
 -- AUTO_INCREMENT de tabela `fornecedor`
 --
 ALTER TABLE `fornecedor`
-  MODIFY `idFornecedor` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idFornecedor` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `funcionario`
 --
 ALTER TABLE `funcionario`
-  MODIFY `idFuncionario` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `idFuncionario` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de tabela `itenspedido`
@@ -322,7 +328,7 @@ ALTER TABLE `pedido`
 -- AUTO_INCREMENT de tabela `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `idProduto` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idProduto` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restrições para despejos de tabelas
