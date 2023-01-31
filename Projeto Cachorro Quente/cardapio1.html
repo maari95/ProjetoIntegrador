@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Cardápio</title>
+    <link rel="stylesheet" type="text/css" href="css/Base.css">
+    <link rel="icon" href="icon/LOGO.png">
+    <!-- ************* -->
+   
+    
+    <!-- ****************** -->
+    <nav class="navbar navbar-expand-lg navbar" fixed-top style="background-color: black;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="indexatualizado.html"><img src="icon/LOGO.png"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mynavbar">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+             <a class="nav-link" href="home.html" style="color:#c99c5e;">Página Inicial</a>
+            </li>
+            <li class="nav-item">
+             <a class="nav-link" href="cardapio1.html" style="color:#c99c5e;">Cardápio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sobre1.html" style="color:#c99c5e;">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#modal1" data-toggle="modal" target="blank" style="color:#c99c5e;">Contatos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="p-2"></p>
+      <p class="p-2"></p>
+      <a href="pagelogin.html"><img src="icon/logout.png" width="32px" height="32px" align="right"></a>
+      <p class="p-2"></p>
+    </nav>
+    <nav class="nav nav-pills justify-content-start">
+      <a class="navbar-brand" href="pagelogin.html">
+          <a style="width: 50px; height: 50px; margin: 10px; margin-top: 5px;background:0;"
+              class="nav-link nav-button active" href="home.html"><img src="img/seta_esquerda.png" width="50rem" height="50rem"></a>
+          </li>
+          </ul>
+  </nav>
+  </head>
+  <body style="background-color: #000000;">
+  
+
+    <div class="container-fluid">
+      <div class="container">
+          <div class="row text-center">
+              <span id="topo"></span>
+              <header id="cabecalhoprincipal" class="col-12">
+                  <img id="logo" src="img/LOGO1.webp" style="height: 250px; filter: contrast(150%)">
+                  <p class="p-1"></p>
+              </header>
+          </div>
+          <!-- BOTÕES -->
+          <!-- <div class="container-fluid"> -->
+              <!-- <div class="row">
+                  <div class="col-sm-3">
+
+
+                    <a href="indexatualizado.html" target="_self" style="text-decoration: none;">
+                          <button type="button" class="btn btn btn-outline-warning btn-lg btn-block">Home</button>
+                      </a>
+                  </div>
+                  <div class="col-sm-3">
+                      <a href="cardapio.html" target="_self" style="text-decoration: none;">
+                          <button type="button" class="btn btn btn-outline-warning btn-lg btn-block">Cardápio</button>
+                      </a>
+                  </div>
+                  <div class="col-sm-3">
+                      <a href="sobre.html" target="_self" style="text-decoration: none;">
+                          <button type="button" class="btn btn btn-outline-warning btn-lg btn-block">Sobre nós</button>
+                      </a>
+                  </div>
+                  <div class="col-sm-3">
+                      <a href="#modal1" data-toggle="modal" target="blank" style="text-decoration: none;">
+                          <button type="button" class="btn btn btn-outline-warning btn-lg btn-block">Contatos</button>
+                      </a>
+                  </div>
+
+              </div>
+          </div> -->
+          <div id="modal1" class="modal fade" tabindex="-1" role="dialog">
+              <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title">Contatos</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                              <span aria-hidden="true">&times;</span>
+                          </button>
+                      </div>
+                      <div class="modal-body">
+                          <img src="https://img.icons8.com/ios-filled/344/ringer-volume.png" width="10%" height="10%">
+                        <b style="color:black ;">(21)3663-2868</b><br>
+                        <br>
+                            <img src="icon/insta.png" width="10%" height="10%">
+                            <a href="https://www.instagram.com/dog_primeartesanal/" style="color:black;"><b>@dog_primeartesanal</b></a>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">Fechar</button>
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <p class="p-6"></p>
+          <p class="p-2"></p>
+          <p class="p-2"></p>
+          <body>
+            <style>
+        body{
+            background-image: url('img/background.webp');
+            }
+    </style>
+    <div class="container">
+            <style>
+              table, th, td{
+                  border:2px solid #c99c5e;
+                  border-collapse: collapse;
+                  border-style: solid;
+
+              }
+              table{
+                  width: 100%;
+                  
+                 
+              }
+          </style>
+        <center><h2 style="color: #c99c5e; font-family: Constantia; font-size: 50px;">Cardápio</h2></center>
+        <table id="cardapio"  style="color: #c99c5e;">
+            <p class="p-2"></p>
+            <tr>
+               <td>01. Hot dog de cafta com cream cheeser
+                <p class="p-1" style="color:white;">Carne, cebolas caramelada, cream cheese, bacon, molho barbecue</p>
+               </td>
+               <td><b>R$19,90</b></td>
+               
+         <td><img src="icon/cam.png" type="button" width="20px" height="20px" data-bs-toggle="modal" data-bs-target="#myModal1">
+         </button>
+         <div class="modal fade" id="myModal1">
+            <div class="modal-dialog modal-md">
+              <div class="modal-content">
+          
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title" style="color: #000000;font-family:Constantia;">Hot dog de cafta com cream cheeser</h4>    
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+          
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <img src="img/5.webp" width="100%" alt="">
+                </div>
+          
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Fechar</button>
+                </div>
+          
+              </div>
+            </div>
+          </div>
+          </td>
+               </tr>
+               <tr>
+               <td>02. Hot dog de cafta com chedar<br>
+                <p class="p-1" style="color:white;">Carne, cebola caramelada, chedar, linguiça calabresa, molho, pão selado na manteiga com alho</p>
+            </td>
+            <td><b>R$21,99</b></td>
+            <td><center><img src="icon/cam.png" type="button" width="20px" height="20px" data-bs-toggle="modal" data-bs-target="#myModal2"></center>
+                <div class="modal fade" id="myModal2">
+                    <div class="modal-dialog modal-md">
+                      <div class="modal-content">
+                  
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title" style="color: #000000;font-family:Constantia;">Hot dog de cafta com chedar</h4>   
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                  
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                          <img src="img/4.webp" width="100%" alt="">
+                        </div>
+                  
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                  
+                      </div>
+                    </div>
+                  </div>
+                  
+            </td>
+            </tr>
+            <tr>
+                <td>03. Hot dog de frango <br>
+                    <p class="p-1" style="color:white;">Frango, aneis de cebola, peito de peru, molho, pão selado no azeite</p>
+             </td>
+             <td><b>R$21,90</b></td>
+             <td><center><img src="icon/cam.png" type="button" width="20px" height="20px" data-bs-toggle="modal" data-bs-target="#myModal"></center>
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog modal-md">
+                      <div class="modal-content">
+                  
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                        <h4 class="modal-title" style="color: #000000;font-family:Constantia;"> Hot dog de frango</h4>   
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                  
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                          <img src="img/19.webp" width="100%" alt="">
+                        </div>
+                  
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                  
+                      </div>
+                    </div>
+                  </div>
+                  
+            </td>
+            </tr>
+             <tr>
+                <td>04. Hot dog cafta recheada <br>
+                    <p class="p-1" style="color:white;">Pão francês,  cafta recheada com queijo mussarela, com farelo de bacon</p>
+             </td>
+             <td><b>R$29,80</b></td>
+             <td><center><img src="icon/cam.png" type="button" width="20px" height="20px" data-bs-toggle="modal" data-bs-target="#myModal4"></center>
+                <div class="modal fade" id="myModal4">
+                    <div class="modal-dialog modal-md">
+                      <div class="modal-content">
+                  
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title" style="color: #000000;font-family:Constantia;">Hot dog cafta recheada </h4>  
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                  
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                          <img src="img/8.webp" width="100%" alt="">
+                        </div>
+                  
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                  
+                      </div>
+                    </div>
+                  </div>
+                  
+            </td>
+            </tr>
+                           
+             <tr>
+                <td>05. Hot dog de cafta com queijo <br>
+                    <p class="p-1" style="color:white;">Pão de briochi, carne de cafta 100g, queijo coalho derretido e barbecue</p>
+             </td>
+             <td><b>R$25,00</b></td>
+             <td><center><img src="icon/cam.png" type="button" width="20px" height="20px" data-bs-toggle="modal" data-bs-target="#myModal5"></center>
+                <div class="modal fade" id="myModal5">
+                    <div class="modal-dialog modal-md">
+                      <div class="modal-content">
+                  
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title" style="color: #000000;font-family:Constantia;"> Hot dog de cafta com queijo </h4>  
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                  
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                          <img src="img/2.2.webp" width="100%" alt="">
+                        </div>
+                  
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                  
+                      </div>
+                    </div>
+                  </div>
+                  
+            </td>
+            </tr>
+        </table>
+        <p class="p-2"></p>
+        <style>
+            table, td, th{
+                border-style: solid;
+            }
+            table{
+                width: 100%;
+                border-collapse: collapse;
+            }
+        </style>
+        <h2 style="color: #c99c5e; font-family: Constantia; font-size: 50px;">Acompanhamentos</h2>
+        <table id="acompanhamento" style="color: #c99c5e;">
+            <p class="p-2"></p>
+            <tr>
+                <td><p class="p-1" style="color:white;">Batata Frita</p></td>
+                <td><b><center>R$8,00</center></b></td>
+                <td><center><img src="icon/cam.png" type="button" width="20px" height="20px" data-bs-toggle="modal" data-bs-target="#myModal6"></center>
+                    <div class="modal fade" id="myModal6">
+                        <div class="modal-dialog modal-md">
+                          <div class="modal-content">
+                      
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title" style="color: #000000;font-family:Constantia;">Batata Frita </h4>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                      
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                              <img src="img/batata.jpg" width="100%" alt="">
+                            </div>
+                      
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Fechar</button>
+                            </div>
+                      
+                          </div>
+                        </div>
+                      </div>
+                      
+                </td>
+            </tr>
+            <tr>
+                <td><p class="p-1" style="color:white;">Rútica</p></td>
+                <td><b><center>R$11,00</b></center></td>
+                <td><center><img src="icon/cam.png" type="button" width="20px" height="20px" data-bs-toggle="modal" data-bs-target="#myModal7"></center>
+                    <div class="modal fade" id="myModal7">
+                        <div class="modal-dialog modal-md">
+                          <div class="modal-content">
+                      
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title" style="color: #000000;font-family:Constantia;"> Rútica </h4>
+                               <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                      
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                              <img src="img/batata rustica.jpg" width="100%" alt="">
+                            </div>
+                      
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                            </div>
+                      
+                          </div>
+                        </div>
+                      </div>
+                      
+                </td>
+            </tr>
+            <tr>
+                <td><p class="p-1" style="color:white;">Aneis de Cebola</p></td>
+                <td><b><center>R$12,90</center></b></td>
+                <td><center><img src="icon/cam.png" type="button" width="20px" height="20px" data-bs-toggle="modal" data-bs-target="#myModal8"></center>
+                    <div class="modal fade" id="myModal8">
+                        <div class="modal-dialog modal-md">
+                          <div class="modal-content">
+                      
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title" style="color: #000000;font-family:Constantia;"> Aneis de cebola </h4>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                      
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                              <img src="img/aneis.jpg" width="100%" alt="">
+                            </div>
+                      
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Fechar</button>
+                            </div>
+                      
+                          </div>
+                        </div>
+                      </div>
+                      
+                </td>
+            </tr>
+            <tr>
+                <td><p class="p-1" style="color:white;">Molho da Casa, Molho verde, Maionese de bacon</p></td>
+                <td><center><b>R$3,00</b></center></td>
+                <td><center><img src="icon/cam.png" type="button" width="20px" height="20px" data-bs-toggle="modal" data-bs-target="#myModal9">
+                    <!-- Corpo do modal -->
+                    <div class="modal fade" id="myModal9">
+                        <div class="modal-dialog modal-md">
+                          <div class="modal-content">
+                      
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title" style="color: #000000;font-family:Constantia;"> Molho da Casa, Molho verde,Maionese de bacon </h4> 
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                      
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                              <img src="img/molho.jpg" width="100%" alt="">
+                            </div>
+                      
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Fechar</button>
+                            </div>
+                      
+                          </div>
+                        </div>
+                      </div>
+                      
+                </td>
+            </tr>
+        </table>
+        <p class="p-2"></p>
+        <style>
+            table, td, th{
+                border-style: solid;
+            }
+            table{
+                width: 100%;
+                border-collapse: collapse;
+            }
+        </style>
+        <h2 style="color: #c99c5e; font-family: Constantia; font-size: 50px;">Bebidas</h2>
+        <table id="bebidas"  style="color: #c99c5e;">
+            <p class="p-2"></p>
+            <tr>
+                <td><p class="p-1" style="color:white;">Refrigerante Lata</p></td>
+                <td><center><b>R$6,00</b></center></td>
+                <td><center><img src="icon/cam.png" type="button" width="20px" height="20px" data-bs-toggle="modal" data-bs-target="#myModal10"></center>
+                    <div class="modal fade" id="myModal10">
+                        <div class="modal-dialog modal-md">
+                          <div class="modal-content">
+                      
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title" style="color: #000000;font-family:Constantia;"> Refrigerante Lata</h4> 
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                      
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                              <img src="img/coca.jpg" width="100%" alt="">
+                            </div>
+                      
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Fechar</button>
+                            </div>
+                      
+                          </div>
+                        </div>
+                      </div>
+                      
+                </td>
+            </tr>
+            <tr>
+                <td><p class="p-1" style="color:white;">Refrigerante 600ml</p></td>
+                <td><center><b>R$9,00</b></center></td>
+                <td><center><img src="icon/cam.png" type="button" width="20px" height="20px" data-bs-toggle="modal" data-bs-target="#myModal11"></center>
+                    <div class="modal fade" id="myModal11">
+                        <div class="modal-dialog modal-md">
+                          <div class="modal-content">
+                      
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title" style="color: #000000;font-family:Constantia;"> Refrigerante 600ml</h4>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+                      
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                              <img src="img/coca2.jpeg" width="100%" alt="">
+                            </div>
+                      
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Fechar</button>
+                            </div>
+                      
+                          </div>
+                        </div>
+                      </div>
+                      
+                </td>
+            </tr>
+            <tr>
+                <td><p class="p-1" style="color:white;">Refrigerante 1L</p></td>
+                <td><b><center>R$11,00</center></b></td>
+               <td><center><img src="icon/cam.png" type="button" width="20px" height="20px" data-bs-toggle="modal" data-bs-target="#myModal12"></center>
+                <div class="modal fade" id="myModal12">
+                    <div class="modal-dialog modal-md">
+                      <div class="modal-content">
+                  
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title" style="color: #000000;font-family:Constantia;"> Refrigerante 1L</h4>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                  
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                          <img src="img/coca3.jpg" width="100%" alt="">
+                        </div>
+                  
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                  
+                      </div>
+                    </div>
+                  </div>
+                  
+            </td>
+            </tr>
+            
+        </table>
+        <p class="p-2"></p>
+    </div>
+         </div>
+        </div>
+        </body>
+        <p class="p-1"></p>
+        <div class="row">
+                <div class="col-md-12 text-center">
+                <footer style="background: black;">
+                    <p class="p-1"></p>
+                      <!--   <img src="img/mapa.PNG " class="img-fluid" width="15%" height="15%" align="right" alt="..." display="flex-sm-fill"> -->
+                        <p class="p-1"></p>
+                        <p class="p-1"></p>
+                    <h6 style="color:white;"><b>Encontre-nos aqui</b></h6>
+                         <p style="color: white;"><a href="https://goo.gl/maps/PWH7Vt6rBzQaZgfFA" target="_blank" style="text-decoration:none; color: white;">Rua Luis Sobral, 1260 - Metrópole, <br> Nova iguaçu - RJ. 26220-278</br></p></a>
+                         <a href="#"><img id="zap" src="icon/whatsapp.png" align="center"></a>
+                         <a href="https://www.instagram.com/dog_primeartesanal" target="_self"><img id="insta" src="icon/instagram.png"align="center"></a>
+                         <a href="https://www.instagram.com/dog_primeartesanal" target="_self" ><img id="ifood"src="icon/logo-ifood-256.png"align="center" widht="5%" height="5%"></a>
+                     </div>
+                </footer>
+
+              
+                </div>
+                </div>
+    
+                
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+
+</html>
