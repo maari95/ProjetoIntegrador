@@ -29,7 +29,7 @@ if (mysqli_query($link, $sql)){
     $_SESSION['msg']="Usuário cadastrado com sucesso";
 	header('Location: admin.html');
 }else{
-	echo 'Erro ao cadastrar cliente..';
+	echo 'Erro ao cadastrar administrador..';
 }
 
 ?>
