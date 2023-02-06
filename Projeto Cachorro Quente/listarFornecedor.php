@@ -103,7 +103,10 @@ $result = mysqli_query($conn, $sql);
     mysqli_close($conn);
     ?> 
       </table> 
-</div>   
+</div>  
+
+
+
      <p class="p-1"></p>
     <div class="row">
         <div class="col-md text-center">
