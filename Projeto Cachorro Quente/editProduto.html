@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Edição de Registros</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/900/900834.png">
+    <link href="css/offcanvas-navbar.css" rel="stylesheet">
+    <link href="css/styleform.css" rel="stylesheet">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/offcanvas-navbar/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Favicons -->
+</head>
+<body style="background-image: url(img/background.webp);">
+<!-- Menu -->
+<header>
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation" style="background-color: black;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="icon/LOGO.png" width="90%" height="90%"></a>
+    <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="homeAdm.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Cadastro</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="cadastroadm.html">Cadastro de Administrador</a></li>
+            <li><a class="dropdown-item" href="cadastrofornecedor.html">Cadastro de Fornecedor</a></li>
+            <li><a class="dropdown-item" href="cadastroproduto.html">Cadastro de Produto</a></li>
+           
+          </ul>
+        </li>
+       </ul>
+      </div>
+     
+  </div>
+  <p class="p-2"></p>
+  <p class="p-2"></p>
+  <a href="admin.html"><img src="icon/logout.png" width="32px" height="32px"></a>
+  <p class="p-2"></p>
+</nav>
+</header> 
+<p class="p-1"></p>
+
+  <p class="p-1"></p>
+<form action='editproduto.php' method="POST"> 
+<div class="padding">
+        <div class="container d-flex justify-content-center">
+<div class="col-lg-8 grid-margin stretch-card">
+              <!--form mask starts-->
+                <div class="card border border-3 border-dark">
+                <div class="card-body" style="padding:20px">
+                <p class="p-1"></p>
+                <center><h4 class="card-title">Alteração de Cadastro de Produtos</h4></center>
+            <p class="p-2"></p>
+            <form class="forms-sample">
+            <div class="form-group row">
+            <div class="col">
+                <p class="p-0.5"></p>
+                <label>idProduto</label>
+                     <input class="form-control" type="number" name="idProduto" placeholder="idProduto">
+                      </div><br>
+                      <div class="col">
+                        <p class="p-0.5"></p>
+                        <label>Nome Produto</label>
+                        <input class="form-control" name="nomeProduto" placeholder="Nome do produto">
+                      </div>
+                    </div>
+                    <!-- LINHA 2 -->
+                    <div class="form-group">
+                    <div class="col">
+                    <p class="p-0.5"></p>
+                      <label>Categoria</label>
+                       <input class="form-control" name="categoria" placeholder="Principal, Acompanhamento e Bebida">
+                    </div>
+                      </div>      
+                  <div class="form-group row">
+                    <div class="col">
+                    <p class="p-0.5"></p>
+                      <label>Descrição</label>
+                     <input class="form-control" name="descricao" placeholder="Descrição do produto">
+                    </div>
+                    <div class="col">
+                        <p class="p-0.5"></p>
+                      <label>Preço</label>
+                       <input class="form-control" name="preco" placeholder="R$ 00.00" maxlength="15">
+                    </div>
+                    </div>
+                    <p class="p-2"></p>
+                    <p class="p-1"></p>
+                  <center><button type="submit" name="submit" class="btn btn-dark">Alterar Dados</button></center>
+                  </form>
+                  
+              <p class="p-1"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<p class="p-1"></p>
+    <div class="row">
+        <div class="col-md text-center">
+         <footer style="background: black; height: 12rem;  position: absolute; bottom: 0; width: 100%; height: 10rem; text-align: center; line-height: 100px;">
+      <h6 style="color:white; padding:70px;margin-right: 25px;"><small>Senac &copy; 2023</small></h6>
+      </div>
+    </div>
+</div>
+ 
+    </footer>
+
+
+<script src= "mascaras.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+      <script src="js/offcanvas-navbar.js"></script>
+  </body>
+</html>
