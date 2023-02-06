@@ -48,8 +48,8 @@
             <div class="row">
                 <div class="col-sm-7">
                     <label>Nome Completo*</label>
-                    <input type="text" class="form-control is valid form-control-md" id="validationdefault01"
-                        name="nome" placeholder="Digite seu nome" autocomplete="off" keypress="somenteNumeros" required><br>
+                    <input type="text" class="form-control is valid form-control-md" id="validationServer01"
+                        name="nome" placeholder="Digite seu nome" autocomplete="off" required><br>
                 </div>
                 <div class="col-sm">
                     <label>CPF*</label>
@@ -150,7 +150,9 @@
                 <div class="col-sm-12">
                     <label>Senha*</label>
                     <input type="password" class="form-control is valid form-control-md" id="validationdefault03"
-                        name="senha" placeholder="Senha" required>
+                        name="senha" placeholder="Senha" required><small id="passwordHelpInline" class="text-muted-" style="color: #c99c5e;">
+                            Deve ter entre 6 e 12 caracteres.
+                          </small>
                 </div>
             </div>
 
