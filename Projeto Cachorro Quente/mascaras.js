@@ -77,7 +77,6 @@ e.target.value = v;
 
 }
 
-
 //moeda
 const inputmoeda = document.getElementById("#preco");
 
@@ -98,4 +97,5 @@ v = v.replace(/(\d)(\d{3}),/g, "$1.$2,");
 e.target.value = v;
 
 }
+
 
