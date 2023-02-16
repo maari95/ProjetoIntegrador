@@ -1,8 +1,12 @@
 <?php
+
 session_start();
+
 require_once("conexaobanco.php");
+
 $email = $_POST['email'];
 $senha = $_POST['senha'];
+
 $objDb = new db();
 
 $link = $objDb -> conecta_mysql();
